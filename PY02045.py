@@ -1,11 +1,12 @@
-def check(n):
-    while len(n) > 1:
-        mid = len(n) // 2
-        dau = int(n[:mid])
-        sau = int(n[mid:])
-        ketqua = dau + sau
-        print(ketqua)
-        ketqua = str(ketqua)
+def split_and_sum(number: str):
+    while len(number) > 1:
+        n = len(number)
+        mid = n // 2
+        left_part = int(number[:mid])
+        right_part = int(number[mid:])
+        number = str(left_part + right_part)
+        print(number)
 
-n = input().strip()
-check(n)
+# Đọc input từ người dùng
+number = input().strip()
+split_and_sum(number)
